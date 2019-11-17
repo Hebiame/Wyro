@@ -3,14 +3,15 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --host 192.168.2.2",
     "build:dev": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
     "test:ci": "ng test --no-watch --code-coverage --browsers=ChromeHeadlessCI",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "e2e:ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js"
+    "e2e:ci": "ng e2e --protractor-config=e2e/protractor-ci.conf.js",
+    "postinstall": "node_modules/.bin/webdriver-manager update --versions.chrome=77.0.3865.90"
   },
   "private": true,
   "dependencies": {

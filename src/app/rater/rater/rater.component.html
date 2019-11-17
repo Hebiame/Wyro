@@ -1,0 +1,10 @@
+<ng-container *ngIf="pictures$ | async as pictures">
+  <img
+    [src]="'data:image/jpg;base64,' + pictures[0].image"
+    (click)="handleChoice(pictures[0].id, pictures[1].id)"
+  />
+  <img
+    [src]="'data:image/jpg;base64,' + pictures[1].image"
+    (click)="handleChoice(pictures[1].id, pictures[0].id)"
+  />
+</ng-container>
